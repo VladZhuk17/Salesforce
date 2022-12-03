@@ -3,23 +3,15 @@ package pages;
 import elements.DropDownForContactPage;
 import elements.InputFieldForContactPage;
 import model.Contact;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
 
 public class ContactPage extends BasePage {
 
-    private static final int WAIT_ELEMENT = 15;
     private static final String urlContactPage = "https://techmeskills.lightning.force.com/lightning/o/Contact/new?count";
 
     @FindBy(xpath = "//button[@name='SaveEdit']")
     private WebElement buttonSaveEdit;
-
-    @FindBy(xpath = "//button[@id='combobox-button-142']")
-    private WebElement comboBoxButton;
 
     public ContactPage openContactPage() {
         driver.get(urlContactPage);

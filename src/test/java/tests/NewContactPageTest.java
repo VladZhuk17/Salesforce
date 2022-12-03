@@ -3,10 +3,10 @@ package tests;
 import model.Contact;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import services.ContactPageService;
+import services.NewContactPageService;
 import services.LoginPageService;
 
-public class ContactPageTest {
+public class NewContactPageTest {
     @BeforeClass
     public void loginSalesForce() {
         LoginPageService loginPageService = new LoginPageService();
@@ -16,7 +16,7 @@ public class ContactPageTest {
    @Test
     public void verifyCreatingContact() {
         Contact contact = new Contact("Mr.", "Vlad", "Zhuk", "88005553535", "123456");
-        ContactPageService contactPageService = new ContactPageService();
+        NewContactPageService contactPageService = new NewContactPageService();
         contactPageService.createContact(contact);
     }
 }

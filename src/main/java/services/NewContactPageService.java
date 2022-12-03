@@ -3,7 +3,7 @@ package services;
 import model.Contact;
 import pages.ContactPage;
 
-public class ContactPageService {
+public class NewContactPageService {
 
     public void createContact(Contact contact) {
         ContactPage contactPage = new ContactPage();
